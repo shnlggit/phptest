@@ -36,6 +36,11 @@
 	$taxrate = 0.10;
 	$totalamount = $totalamount * (1 + $taxrate);
 	echo 'Total include tax: $' . number_format ( $totalamount, 2 ) . '<br/>';
+	
+	$a = 56;
+	echo gettype ( $a ) . '<br/>';
+	settype ( $a, 'double' );
+	echo gettype ( $a ) . '<br/>';
 	?>
 </body>
 </html>
