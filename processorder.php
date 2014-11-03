@@ -41,6 +41,9 @@
 	echo gettype ( $a ) . '<br/>';
 	settype ( $a, 'double' );
 	echo gettype ( $a ) . '<br/>';
+	
+	$selection = $_POST['selection'];
+	echo 'select:'.$selection;
 	?>
 </body>
 </html>
