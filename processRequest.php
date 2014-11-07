@@ -1,16 +1,17 @@
 <?php
 require_once("processLogin.php");
+require_once("DebugUtil.php");
 
-echo 'post: ';
+DebugUtil::log('post: ');
 foreach ( $_POST as $key => $value ) {
-	echo $key . ':' . $value . ' ';
+	DebugUtil::log($key . ':' . $value . ' ');
 }
-echo '<br/>';
+DebugUtil::logln("");
 
 $className = 'Process'.$_POST ['requestClass'];
 
 $requestClass = new $className();
 $requestClass->process();
 
-echo "end<br/>";
+DebugUtil::logln("end"); ;
 ?>
