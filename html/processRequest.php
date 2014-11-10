@@ -1,6 +1,6 @@
 <?php
-require_once("processLogin.php");
-require_once("DebugUtil.php");
+require_once("../code/processLogin.php");
+require_once("../code/DebugUtil.php");
 
 DebugUtil::log('post: ');
 foreach ( $_POST as $key => $value ) {
