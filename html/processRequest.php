@@ -7,14 +7,11 @@ if (! isset ( $_POST ['requestClass'] )) {
 	// exit;
 	$err = new ResponseError ();
 	$err->build ( "request class not found" );
-	exit;
+	exit ();
 }
 
 DebugUtil::log ( 'post: ' );
-foreach ( $_POST as $key => $value ) {
-	DebugUtil::log ( $key . ':' . $value . ' ' );
-}
-DebugUtil::logln ( "" );
+DebugUtil::logln ( $_POST );
 
 $className = 'Process' . $_POST ['requestClass'];
 
@@ -22,5 +19,4 @@ $requestClass = new $className ();
 $requestClass->process ();
 
 DebugUtil::logln ( "end" );
-;
 ?>

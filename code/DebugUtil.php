@@ -9,7 +9,7 @@ class DebugUtil {
 		if (! DEBUGMODE)
 			return;
 		
-		print ($msg) ;
+		print_r ( $msg );
 	}
 	/**
 	 *
@@ -19,7 +19,8 @@ class DebugUtil {
 		if (! DEBUGMODE)
 			return;
 		
-		print ($msg . "<br/>") ;
+		print_r ( $msg );
+		print "<br/>";
 	}
 	/**
 	 *

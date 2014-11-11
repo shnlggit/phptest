@@ -12,10 +12,10 @@
 				<td>login</td>
 			</tr>
 			<tr>
-				<td>User ID</td>
+				<td>QQ</td>
 			</tr>
 			<tr>
-				<td><input type="text" name="id" value="1"/></td>
+				<td><input type="text" name="qqid" value="1"/></td>
 			</tr>
 			<tr>
 				<td><input type="submit" value="send" /></td>
@@ -27,9 +27,6 @@
 		<table>
 			<tr>
 				<td>time</td>
-			</tr>
-			<tr>
-				<td>User ID</td>
 			</tr>
 			<tr>
 				<td><input type="text" name="id" value="1"/></td>
