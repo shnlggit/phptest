@@ -21,12 +21,13 @@ class ProcessLogin extends ProcessBase {
 			// found user
 			$row = $result->fetch_array ();
 			DebugUtil::logln($row);
+			$query->free();
 		} else {
 			DebugUtil::logln("not found");
 			// not found user, create user
-			// INSERT INTO `phptestdb`.`user` (`qq`, `score`) VALUES ('123', '0');
 			$query = "INSERT INTO user (`qq`, `score`) VALUES ('".$qqid."', '0')";
 			$result = $this->getDb()->query ( $query );
+			$query->free();
 		}
 		
 		$this->dbclose ();
