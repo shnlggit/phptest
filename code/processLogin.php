@@ -16,18 +16,22 @@ class ProcessLogin extends ProcessBase {
 		//$query = "SELECT * FROM user";
 		$result = $this->getDb()->query ( $query );
 		
-		if ($result) {
+		DebugUtil::logln($result);
+		if ($result && $result->num_rows > 0) {
 			DebugUtil::logln("found");
 			// found user
 			$row = $result->fetch_array ();
 			DebugUtil::logln($row);
-			$query->free();
+			$result->free();
 		} else {
 			DebugUtil::logln("not found");
+			$result->free();
 			// not found user, create user
 			$query = "INSERT INTO user (`qq`, `score`) VALUES ('".$qqid."', '0')";
 			$result = $this->getDb()->query ( $query );
-			$query->free();
+			if(!$result){
+				DebugUtil::logln("create user failed!");
+			}
 		}
 		
 		$this->dbclose ();
