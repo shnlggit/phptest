@@ -5,8 +5,8 @@
 <title>request test</title>
 </head>
 <body>
-	<form action="processRequest.php" method="post">
-		<input type="hidden" name="requestClass" value="ManagerLogin" />
+	<form action="manageRequest.php" method="post">
+		<input type="hidden" name="requestClass" value="ManageLogin" />
 		<table>
 			<tr>
 				<td>User name:</td>
@@ -17,7 +17,7 @@
 				<td><input type="password" name="pswd" /></td>
 			</tr>
 			<tr>
-				<td><input type="submit" value="send" /></td>
+				<td><input type="submit" value="Login" /></td>
 			</tr>
 		</table>
 	</form>
