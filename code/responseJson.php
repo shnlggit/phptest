@@ -1,6 +1,7 @@
 <?php
-require_once ("DebugUtil.php");
-class ResponseBase {
+require_once ("debugUtil.php");
+require_once ("baseView.php");
+class ResponseJson extends BaseView{
 	protected $arrayData;
 	function _construct() {
 		$arrayData = array ();
@@ -13,4 +14,3 @@ class ResponseBase {
 		echo $jsonStr;
 	}
 }
-?>

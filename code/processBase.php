@@ -1,6 +1,6 @@
 <?php
-require_once ("DebugUtil.php");
-require_once ("responseError.php");
+require_once ("debugUtil.php");
+require_once ("responseJsonError.php");
 class ProcessBase {
 	protected $userId;
 	protected $db;
@@ -14,7 +14,7 @@ class ProcessBase {
 		if(isset($db)) return;
 		@ $this->db = new mysqli ( 'localhost', 'root', 'root', 'phptestdb' );
 		if (mysqli_connect_errno ()) {
-			$err = new ResponseError ();
+			$err = new ResponseJsonError ();
 			$err->build ( "connect db error" );
 			exit ();
 		}

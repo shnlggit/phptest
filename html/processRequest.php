@@ -1,11 +1,11 @@
 <?php
 require_once ("../code/processLogin.php");
 require_once ("../code/DebugUtil.php");
-require_once ("../code/responseError.php");
+require_once ("../code/responseJsonError.php");
 
 if (! isset ( $_POST ['requestClass'] )) {
 	// exit;
-	$err = new ResponseError ();
+	$err = new ResponseJsonError ();
 	$err->build ( "request class not found" );
 	exit ();
 }

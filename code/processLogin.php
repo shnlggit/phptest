@@ -4,7 +4,7 @@ class ProcessLogin extends ProcessBase {
 	public function process() {
 		DebugUtil::logln ( "login..." );
 		if (! isset ( $_POST ['qqid'] )) {
-			$err = new ResponseError ();
+			$err = new ResponseJsonError ();
 			$err->build ( "QQ not found" );
 			exit ();
 		}

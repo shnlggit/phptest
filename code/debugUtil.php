@@ -20,7 +20,7 @@ class DebugUtil {
 			return;
 		
 		print_r ( $msg );
-		print "<br/>";
+		print '<br/>';
 	}
 	/**
 	 *
@@ -30,7 +30,7 @@ class DebugUtil {
 		if (! DEBUGMODE)
 			return;
 		
-		print ("ERROR:" . $msg . "<br/>") ;
+		print ('ERROR:' . $msg . '<br/>') ;
 		die ();
 	}
 }
