@@ -6,19 +6,23 @@
 </head>
 <body>
 	<form action="manageRequest.php" method="post">
-		<input type="hidden" name="requestClass" value="ManageLogin" />
-		<table>
-			<tr>
-				<td>User name:</td>
-				<td><input type="text" name="user" /></td>
-			</tr>
-			<tr>
-				<td>Password:</td>
-				<td><input type="password" name="pswd" /></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="Login" /></td>
-			</tr>
+		<input name="requestClass" value="ManageLogin" type="hidden">
+		<table style="background-color: rgb(51, 102, 255);" align="center">
+			<tbody>
+				<tr>
+					<td>User name:</td>
+					<td><input name="user" type="text"></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><input name="pswd" type="password"></td>
+				</tr>
+				<tr>
+					<td style="text-align: center;" colspan="2"><input value="Login"
+						type="submit"></td>
+				</tr>
+			</tbody>
 		</table>
 	</form>
 </body>
+</html>
