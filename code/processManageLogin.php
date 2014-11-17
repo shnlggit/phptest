@@ -7,20 +7,17 @@ class ProcessManageLogin extends ProcessManageBase {
 		$user = $_POST ['user'];
 		$password = $_POST ['pswd'];
 		try {
-			if (! $this->isFilledOut ( $_POST )) {
-				throw new Exception ( 'Form not filled out!' );
-			}
+			$this->checkFillOut ( $_POST );
 		} catch ( Exception $e ) {
 			ManageCommon::showError ( $e->getMessage () );
 			exit ();
 		}
 	}
-	private function isFilledOut($formVars) {
+	private function checkFillOut($formVars) {
 		foreach ( $formVars as $key => $value ) {
 			if (! isset ( $key ) || ($value == '')) {
-				return false;
+				throw new Exception ( 'Form not filled out!' );
 			}
 		}
-		return true;
 	}
 }
